@@ -33,7 +33,7 @@ function Pipeline() {
         if (l.id !== id) return l;
         const i = STAGES.findIndex((s) => s.id === l.stage);
         const next = STAGES[Math.min(i + 1, STAGES.length - 1)];
-        return { ...l, stage: next.id as StageId };
+        return { ...l, stage: (next?.id ?? l.stage) as StageId };
       }),
     );
   }
