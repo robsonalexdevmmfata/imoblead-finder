@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BuscarLeadsRouteImport } from './routes/buscar-leads'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as PipelineRouteImport } from './routes/pipeline'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +25,16 @@ const BuscarLeadsRoute = BuscarLeadsRouteImport.update({
   path: '/buscar-leads',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PipelineRoute = PipelineRouteImport.update({
   id: '/pipeline',
   path: '/pipeline',
@@ -32,30 +44,38 @@ const PipelineRoute = PipelineRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/buscar-leads': typeof BuscarLeadsRoute
+  '/dashboard': typeof DashboardRoute
+  '/login': typeof LoginRoute
   '/pipeline': typeof PipelineRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/buscar-leads': typeof BuscarLeadsRoute
+  '/dashboard': typeof DashboardRoute
+  '/login': typeof LoginRoute
   '/pipeline': typeof PipelineRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/buscar-leads': typeof BuscarLeadsRoute
+  '/dashboard': typeof DashboardRoute
+  '/login': typeof LoginRoute
   '/pipeline': typeof PipelineRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/buscar-leads' | '/pipeline'
+  fullPaths: '/' | '/buscar-leads' | '/dashboard' | '/login' | '/pipeline'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/buscar-leads' | '/pipeline'
-  id: '__root__' | '/' | '/buscar-leads' | '/pipeline'
+  to: '/' | '/buscar-leads' | '/dashboard' | '/login' | '/pipeline'
+  id: '__root__' | '/' | '/buscar-leads' | '/dashboard' | '/login' | '/pipeline'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BuscarLeadsRoute: typeof BuscarLeadsRoute
+  DashboardRoute: typeof DashboardRoute
+  LoginRoute: typeof LoginRoute
   PipelineRoute: typeof PipelineRoute
 }
 
@@ -75,6 +95,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BuscarLeadsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pipeline': {
       id: '/pipeline'
       path: '/pipeline'
@@ -88,6 +122,8 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BuscarLeadsRoute: BuscarLeadsRoute,
+  DashboardRoute: DashboardRoute,
+  LoginRoute: LoginRoute,
   PipelineRoute: PipelineRoute,
 }
 export const routeTree = rootRouteImport
