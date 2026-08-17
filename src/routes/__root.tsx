@@ -78,14 +78,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ImobLead — Prospecção ativa de leads imobiliários" },
+      { title: "ImobLead — Prospecção ativa de leads imobiliários com IA" },
       {
         name: "description",
         content:
-          "SaaS imobiliário de prospecção ativa: raspagem inteligente, classificação por IA e pipeline de oportunidades.",
+          "Encontre quem já está procurando imóvel: raspagem em grupos, portais e marketplaces, classificação por IA e pipeline de vendas. Planos a partir de R$ 80/mês.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "ImobLead — Prospecção ativa de leads imobiliários com IA" },
+      { name: "twitter:title", content: "ImobLead — Prospecção ativa de leads imobiliários com IA" },
+      { property: "og:description", content: "Encontre quem já está procurando imóvel: raspagem em grupos, portais e marketplaces, classificação por IA e pipeline de vendas. Planos a partir de R$ 80/mês." },
+      { name: "twitter:description", content: "Encontre quem já está procurando imóvel: raspagem em grupos, portais e marketplaces, classificação por IA e pipeline de vendas. Planos a partir de R$ 80/mês." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/52e5dd3d-93e9-4a5a-a670-9c81b1247c6c" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/52e5dd3d-93e9-4a5a-a670-9c81b1247c6c" },
     ],
     links: [
       {

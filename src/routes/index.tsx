@@ -22,11 +22,11 @@ export const Route = createFileRoute("/")({
         content:
           "Encontre quem já está procurando imóvel: raspagem em grupos, portais e marketplaces, classificação por IA e pipeline de vendas. Planos a partir de R$ 80/mês.",
       },
-      { property: "og:title", content: "ImobLead — Prospecção ativa de leads imobiliários" },
+      { property: "og:title", content: "ImobLead — Prospecção ativa de leads imobiliários com IA" },
       {
         property: "og:description",
         content:
-          "Captura contínua de demanda real, leads classificados por IA e contato imediato no WhatsApp.",
+          "Encontre quem já está procurando imóvel: raspagem em grupos, portais e marketplaces, classificação por IA e pipeline de vendas. Planos a partir de R$ 80/mês.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
