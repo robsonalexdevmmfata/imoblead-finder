@@ -161,7 +161,7 @@ function BuscarLeads() {
           </div>
         </div>
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[1180px] text-sm">
+          <table className="w-full min-w-[1080px] text-sm">
             <thead>
               <tr className="border-b border-border text-left text-xs tracking-wide text-muted-foreground uppercase">
                 <th className="px-5 py-3 font-medium">Contato</th>
@@ -241,7 +241,7 @@ function BuscarLeads() {
                       className="inline-flex items-center gap-1.5 rounded-lg border border-primary/50 bg-primary/10 px-3 py-2 text-xs font-medium text-primary-glow transition-colors hover:bg-primary/20"
                     >
                       <ArrowRightCircle className="size-3.5" />
-                      Mover para o Pipeline
+                      Mover ao Pipeline
                     </button>
                   </td>
                 </tr>
